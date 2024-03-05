@@ -1,7 +1,7 @@
 
 const NavigationBar = () => {
   return (
-    <nav className="bg-white py-6">
+    <nav className="bg-white py-6 text-text-primary">
         <div className="container max-w-[1290px] mx-auto flex justify-between items-center">
             <ul className="flex gap-5 items-center">
                 <li>About Us</li>

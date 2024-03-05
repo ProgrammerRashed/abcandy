@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --color-primary: #5742AC;
+        --text-primary: #2C2347;
+        --text-muted: #5C5C5C;
+        --text-button: #5742AC;
+
+    }
+}
