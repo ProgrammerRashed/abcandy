@@ -1,6 +1,7 @@
 import BlogPost from "@/components/BlogPost";
 import NavigationBar from "@/components/NavigationBar";
 import BlogBanner from "@/components/BlogBanner";
+import FeatureCta from "@/components/FeatureCta";
 
 export default function Home() {
   return (
@@ -21,7 +22,17 @@ export default function Home() {
           </div>
 
           {/* BLOG BANNER */}
-        <BlogBanner/>
+          <BlogBanner />
+
+          {/* FEATURED BLOG SECTION */}
+          <div className="featured-section w-full flex justify-between">
+            <div className="w-[70%]">
+              <BlogPost />
+            </div>
+            <div className="w-[25%] h-full">
+              <FeatureCta />
+            </div>
+          </div>
         </section>
       </main>
     </div>
