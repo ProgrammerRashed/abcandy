@@ -2,7 +2,7 @@ import BlogPost from "@/components/BlogPost";
 import NavigationBar from "@/components/NavigationBar";
 import BlogBanner from "@/components/BlogBanner";
 import FeatureCta from "@/components/FeatureCta";
-
+import FooterComp from "@/components/FooterComp";
 export default function Home() {
   return (
     <div>
@@ -33,6 +33,27 @@ export default function Home() {
               <FeatureCta />
             </div>
           </div>
+
+          {/* ALL BLOGS */}
+          <div>
+            <div className="grid grid-cols-3 my-20 gap-10">
+              <BlogPost />
+              <BlogPost />
+              <BlogPost />
+            </div>
+
+            {/* ALL BLOGS CTA */}
+            <div className="text-center">
+              <button className="border border-text-button text-text-button px-3 py-2">
+                Load More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER SECTION */}
+        <section className="bg-text-primary py-10">
+          <FooterComp />
         </section>
       </main>
     </div>
