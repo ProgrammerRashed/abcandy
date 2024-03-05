@@ -3,6 +3,7 @@ import NavigationBar from "@/components/NavigationBar";
 import BlogBanner from "@/components/BlogBanner";
 import FeatureCta from "@/components/FeatureCta";
 import FooterComp from "@/components/FooterComp";
+import BlogHeader from "@/components/BlogHeader";
 export default function Home() {
   return (
     <div>
@@ -16,6 +17,9 @@ export default function Home() {
 
         {/* BLOGS SECTION */}
         <section className="max-w-[1290px] mx-auto my-20">
+          {/* BLOG HEADER */}
+          <BlogHeader/>
+
           <div className="blogs grid grid-cols-2 gap-10">
             <BlogPost />
             <BlogPost />
