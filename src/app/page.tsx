@@ -5,6 +5,9 @@ import FeatureCta from "@/components/FeatureCta";
 import FooterComp from "@/components/FooterComp";
 import BlogHeader from "@/components/BlogHeader";
 import { Carousel } from "@/components/Carousel";
+import SpacialPost from "@/components/SpacialPost";
+import SpacialVideoPost from "@/components/SpeacialVideoPost";
+
 export default function Home() {
   return (
     <div>
@@ -15,17 +18,17 @@ export default function Home() {
           style={{ borderRadius: "25% 25% 25% 25% / 0% 0% 25% 25%" }}
           className="bg-gradient-to-br from-slate-100 via-slate-100 to-[#f9daff] h-[120vh]"
         >
-          <Carousel/>
+          <Carousel />
         </div>
 
         {/* BLOGS SECTION */}
         <section className="max-w-[1290px] mx-auto my-20">
           {/* BLOG HEADER */}
-          <BlogHeader/>
+          <BlogHeader />
 
           <div className="blogs grid grid-cols-2 gap-10">
-            <BlogPost />
-            <BlogPost />
+            <SpacialPost/>
+           <SpacialVideoPost/>
           </div>
 
           {/* BLOG BANNER */}
