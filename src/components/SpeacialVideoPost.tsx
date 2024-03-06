@@ -1,7 +1,13 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
 
 const SpacialVideoPost = () => {
+  const [isShowModal, setIsShowModal] = useState(false);
+  const onClose = () => {
+    setIsShowModal(false);
+  };
   return (
     <div className="w-full text-text-primary h-auto">
       {/* CARD HEAD */}
@@ -22,9 +28,9 @@ const SpacialVideoPost = () => {
         {/* CARD CONTENT */}
         <div className="content space-y-5">
           <h1 className="text-2xl ">
-          Lorem ipsum dolor sit amet consectetur bibendum nunc in amet auctor enim massa
+            Lorem ipsum dolor sit amet consectetur bibendum nunc in amet auctor
+            enim massa
           </h1>
-          
         </div>
 
         {/* CARD FOOTER */}
@@ -32,11 +38,28 @@ const SpacialVideoPost = () => {
         <div className="mt-5">
           {/* CTA */}
 
-          <button className="text-text-button px-3 py-2 border border-text-button">
+          <button
+            onClick={() => {
+              setIsShowModal(!isShowModal);
+            }}
+            className="text-text-button px-3 py-2 border border-text-button"
+          >
             Watch Now
           </button>
         </div>
       </div>
+      <Modal isShowModal={isShowModal} onClose={onClose} modalTitle="Playing Video">
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/CQQc8QyIGl0?si=fZ0Ml-cSQC_ZCIvo"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </Modal>
     </div>
   );
 };
