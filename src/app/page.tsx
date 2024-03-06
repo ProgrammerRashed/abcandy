@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <div
           style={{ borderRadius: "25% 25% 25% 25% / 0% 0% 25% 25%" }}
-          className="bg-gradient-to-br from-slate-50 via-slate-50 to-[#f9daff] h-[100vh]"
+          className="bg-gradient-to-br from-slate-100 via-slate-100 to-[#f9daff] h-[120vh]"
         >
           <Carousel/>
         </div>
