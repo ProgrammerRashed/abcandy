@@ -4,6 +4,7 @@ import BlogBanner from "@/components/BlogBanner";
 import FeatureCta from "@/components/FeatureCta";
 import FooterComp from "@/components/FooterComp";
 import BlogHeader from "@/components/BlogHeader";
+import { Carousel } from "@/components/Carousel";
 export default function Home() {
   return (
     <div>
@@ -13,7 +14,9 @@ export default function Home() {
         <div
           style={{ borderRadius: "25% 25% 25% 25% / 0% 0% 25% 25%" }}
           className="bg-gradient-to-br from-slate-50 via-slate-50 to-[#f9daff] h-[100vh]"
-        ></div>
+        >
+          <Carousel/>
+        </div>
 
         {/* BLOGS SECTION */}
         <section className="max-w-[1290px] mx-auto my-20">
