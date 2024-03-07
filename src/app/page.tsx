@@ -7,8 +7,13 @@ import BlogHeader from "@/components/BlogHeader";
 import { Carousel } from "@/components/Carousel";
 import SpacialPost from "@/components/SpacialPost";
 import SpacialVideoPost from "@/components/SpeacialVideoPost";
+import getJsonData from "@/utils/getJsonData";
+import BlogContainer from "@/components/BlogContainer";
 
 export default function Home() {
+  const rawData = getJsonData()
+  const data = rawData.filter(singleData => singleData.tags.includes("feature"))[0]
+
   return (
     <div>
       <div className="px-4 md:px-6 lg:px-10">
@@ -39,7 +44,7 @@ export default function Home() {
           {/* FEATURED BLOG SECTION */}
           <div className="featured-section w-full flex flex-col lg:flex-row justify-between">
             <div className="lg:w-[70%] w-full">
-              <BlogPost />
+              <BlogPost data={data}/>
             </div>
             <div className="w-full mt-5 lg:mt-0 lg:w-[25%] h-full">
               <FeatureCta />
@@ -47,20 +52,7 @@ export default function Home() {
           </div>
 
           {/* ALL BLOGS */}
-          <div>
-            <div className="grid lg:grid-cols-3 my-20 gap-10">
-              <BlogPost />
-              <BlogPost />
-              <BlogPost />
-            </div>
-
-            {/* ALL BLOGS CTA */}
-            <div className="text-center">
-              <button className="border border-text-button text-text-button px-3 py-2">
-                Load More
-              </button>
-            </div>
-          </div>
+         <BlogContainer/>
         </section>
 
         {/* FOOTER SECTION */}

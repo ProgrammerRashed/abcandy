@@ -1,4 +1,14 @@
+"use client"
+import React from "react"
+import Modal from "./Modal"
+import ContactUs from "./ContactUs"
+
 const BlogBanner = () => {
+  const [isShowModal, setIsShowModal] = React.useState(false) 
+
+  const onClose = () => {
+      setIsShowModal(false)
+  }
   return (
     <div>
         <div className="bg-[#20172d] py-10 lg:py-24 my-12" style={{backgroundImage: `url('https://i.ibb.co/17HtQ73/blog-banner-bg.jpg')`, backgroundBlendMode: "color-dodge", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
@@ -9,9 +19,14 @@ const BlogBanner = () => {
                 consectetur cras in nulla. Non suspendisse at ac enim. Facilisi
                 nulla tortor nec mollis faucibus odio sodales.
               </p>
-              <button className="bg-white px-3 py-2">Let&apos;s Talk</button>
+              <button className="bg-white px-3 py-2" onClick={()=>{
+                    setIsShowModal(true)
+                }}>Let&apos;s Talk</button>
             </div>
           </div>
+          <Modal isShowModal={isShowModal} onClose={onClose}  modalTitle="Contact Us">
+        <ContactUs/>
+      </Modal>
     </div>
   )
 }

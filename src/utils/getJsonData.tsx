@@ -49,7 +49,7 @@ export default  function getJsonData() {
       "button": "Watch Now",
     },
     {
-      "imageSrc": "https://example.com/image6.jpg",
+      "imageSrc": "https://i.ibb.co/kHKmYbr/six.jpg",
       "category": "Development",
       "date": "8 November 2023",
       "title": "Unlocking the Potential of Web Development",
