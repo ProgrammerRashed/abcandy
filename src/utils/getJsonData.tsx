@@ -34,16 +34,18 @@ export default  function getJsonData() {
       "date": "10 June 2023",
       "title": "Innovative Designs Redefining Modern Aesthetics",
       "content": "Join Emily Johnson as she explores groundbreaking designs that challenge conventions and redefine modern aesthetics. Prepare to be inspired!",
+      "author": "David Clark",
       "tags": ["spacial"]
 
     },
     
-    {
+    { "imageSrc": "https://i.ibb.co/mvmhY2d/five.jpg",
       "videoSrc": "https://www.youtube.com/embed/DA7gA0oH6Nk?si=DUtXqBdMJT17wqKT",
       "category": "DESIGN & CREATIVE",
       "date": "10 June 2023",
       "title": "Revolutionizing Design: A Visual Journey",
-      "tags": ["spacial", "video"],
+      "content": "Delve into the science behind athletic performance and discover the strategies elite athletes use to achieve peak physical condition. Uncover the secrets to success!",
+      "tags": ["video"],
       "button": "Watch Now",
     },
     {
@@ -53,7 +55,7 @@ export default  function getJsonData() {
       "title": "Unlocking the Potential of Web Development",
       "content": "Embark on a journey to unlock the full potential of web development. Explore the latest frameworks, tools, and techniques revolutionizing the industry.",
       "button": "Read More",
-      "tags": ["spacial"]
+      "tags": ["feature"]
     },
     {
       "imageSrc": "https://i.ibb.co/K0f55Zv/seven.jpg",
