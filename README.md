@@ -2,7 +2,7 @@
 
 ## Live Link
 
-[Click here to access the live project](https://employee-management-curd.vercel.app/)
+[Click here to access the live project](https://CodeWithRashed.github.io/abcandy)
 
 ## Features
 - **Pure React Modal and Carousel**: Designed a Modal and a Carousel Only With React And Tailwind.
