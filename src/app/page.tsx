@@ -11,42 +11,44 @@ import SpacialVideoPost from "@/components/SpeacialVideoPost";
 export default function Home() {
   return (
     <div>
-      <NavigationBar />
+      <div className="px-4 md:px-6 lg:px-10">
+        <NavigationBar />
+      </div>
 
       <main>
         <div
           style={{ borderRadius: "25% 25% 25% 25% / 0% 0% 25% 25%" }}
-          className="bg-gradient-to-br from-slate-100 via-slate-100 to-[#f9daff] h-[120vh]"
+          className="bg-gradient-to-br from-slate-100 via-slate-100 to-[#f9daff] h-[160vh] lg:h-[150vh] px-4 md:px-6 lg:px-10"
         >
           <Carousel />
         </div>
 
         {/* BLOGS SECTION */}
-        <section className="max-w-[1290px] mx-auto my-20">
+        <section className="max-w-[1290px] mx-auto my-20 px-4 md:px-6 lg:px-10">
           {/* BLOG HEADER */}
           <BlogHeader />
 
-          <div className="blogs grid grid-cols-2 gap-10">
-            <SpacialPost/>
-           <SpacialVideoPost/>
+          <div className="blogs grid lg:grid-cols-2 gap-10">
+            <SpacialPost />
+            <SpacialVideoPost />
           </div>
 
           {/* BLOG BANNER */}
           <BlogBanner />
 
           {/* FEATURED BLOG SECTION */}
-          <div className="featured-section w-full flex justify-between">
-            <div className="w-[70%]">
+          <div className="featured-section w-full flex flex-col lg:flex-row justify-between">
+            <div className="lg:w-[70%] w-full">
               <BlogPost />
             </div>
-            <div className="w-[25%] h-full">
+            <div className="w-full mt-5 lg:mt-0 lg:w-[25%] h-full">
               <FeatureCta />
             </div>
           </div>
 
           {/* ALL BLOGS */}
           <div>
-            <div className="grid grid-cols-3 my-20 gap-10">
+            <div className="grid lg:grid-cols-3 my-20 gap-10">
               <BlogPost />
               <BlogPost />
               <BlogPost />
@@ -62,7 +64,7 @@ export default function Home() {
         </section>
 
         {/* FOOTER SECTION */}
-        <section className="bg-text-primary py-10">
+        <section className="bg-text-primary py-10 px-4 md:px-6 lg:px-10">
           <FooterComp />
         </section>
       </main>

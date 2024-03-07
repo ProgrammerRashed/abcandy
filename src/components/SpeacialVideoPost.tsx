@@ -51,8 +51,7 @@ const SpacialVideoPost = () => {
       <Modal isShowModal={isShowModal} onClose={onClose} modalTitle="Playing Video">
         <div>
           <iframe
-            width="560"
-            height="315"
+          className="lg:w-[600px] lg:h-[300px] md:w-[400px] md:h-[200px]"
             src="https://www.youtube.com/embed/CQQc8QyIGl0?si=fZ0Ml-cSQC_ZCIvo"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

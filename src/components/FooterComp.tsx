@@ -8,7 +8,7 @@ const FooterComp = () => {
     <div className="max-w-[1290px] mx-auto mt-20">
 
     {/* FOOTER SOCIAL */}
-    <div className="footer-social">
+    <div className="footer-social flex flex-col justify-center items-center lg:block">
       <h3 className="text-3xl text-white">Connect with us</h3>
       <div className="icons flex gap-3 mt-3">
         <Link
@@ -40,7 +40,7 @@ const FooterComp = () => {
     </div>
 
 {/* FOOTER COPYRIGHT */}
-<div className="flex justify-between mt-20">
+<div className="flex flex-col lg:flex-row justify-between items-center lg:items-start mt-20">
   <p className="text-white/60">&copy; 2023 ABCandy Bangladesh Ltd.</p>
   <ul className="flex gap-1 text-white">
     <li><Link href="" className="underline underline-offset-2">Terms of Use</Link></li>
