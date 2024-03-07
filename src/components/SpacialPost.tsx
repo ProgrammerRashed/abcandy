@@ -28,7 +28,6 @@ if (!data[0]) {
         {/* CARD HEAD */}
         <div className="image-container relative min-h-[300px] max-h-[350px] w-full overflow-hidden">
           {data[0].imageSrc!.map((item, idx) => {
-            console.log(item)
             return (
               <Image
                 key={idx}

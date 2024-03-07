@@ -28,7 +28,6 @@ export const Carousel = () => {
           style={{ transition: "transform 0.5s ease" }}
         >
           {data.map((item, idx) => {
-            console.log(item)
             return (
               <div
                 key={idx}
