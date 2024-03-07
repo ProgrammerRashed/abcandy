@@ -1,4 +1,5 @@
 "use client";
+import getJsonData from "@/utils/getJsonData";
 import Image from "next/image";
 import React from "react";
 import { FaArrowLeftLong, FaArrowRight } from "react-icons/fa6";
@@ -7,20 +8,9 @@ export const Carousel = () => {
   const [slide, setSlide] = React.useState(1);
   const button = true;
   const author = false;
-  const data = [
-    {
-      src: "https://picsum.photos/seed/img1/600/400",
-      alt: "Image 1 for carousel",
-    },
-    {
-      src: "https://picsum.photos/seed/img2/600/400",
-      alt: "Image 2 for carousel",
-    },
-    {
-      src: "https://picsum.photos/seed/img3/600/400",
-      alt: "Image 3 for carousel",
-    },
-  ];
+ const rawData = getJsonData()
+ const data = rawData.filter(singleData => singleData.tags.includes("carousel"))
+
 
   const nextSlide = () => {
     setSlide(slide === data.length - 1 ? 0 : slide + 1);
@@ -38,6 +28,7 @@ export const Carousel = () => {
           style={{ transition: "transform 0.5s ease" }}
         >
           {data.map((item, idx) => {
+            console.log(item)
             return (
               <div
                 key={idx}
@@ -52,30 +43,28 @@ export const Carousel = () => {
                 }
               >
                 <Image
-                  src={item.src}
-                  alt={item.alt}
+                  src={Array.isArray(item.imageSrc) ? item.imageSrc[0] : item.imageSrc || ""}
+                  alt={item.title}
                   width={700}
                   height={300}
                   style={{ height: "300px", objectFit: "cover" }}
                 />
                 <div>
                   {idx == slide && (
-                    <div className="card-body bg-white p-5">
+                    <div className="card-body bg-white p-5 text-text-primary">
                       <div className="publish-meta flex gap-3 my-4">
-                        <p className="category font-semibold">
-                          DESIGN & CREATIVE
+                        <p className="category font-semibold uppercase">
+                        {item?.category}
                         </p>
-                        <p className="Date">10 June 2023</p>
+                        <p className="Date !text-text-muted"> {item?.date}</p>
                       </div>
                       {/* CARD CONTENT */}
                       <div className="content space-y-5">
                         <h1 className="text-2xl ">
-                          Lorem ipsum dolor sit Lorem ipsum dolor sit
+                        {item?.title}
                         </h1>
-                        <p className="text-text-muted space-y-4">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. In, modi! Fugiat provident deserunt
-                          exercitationem magnam suscipit quasi iusto quo aut!
+                        <p className="!text-text-muted space-y-4">
+                        {item?.content}
                         </p>
                       </div>
 
@@ -86,16 +75,11 @@ export const Carousel = () => {
 
                         {button && (
                           <button className="text-text-button px-3 py-2 border border-text-button">
-                            Watch Now
+                            {item?.button}
                           </button>
                         )}
 
-                        {/* AUTHOR DETAILS */}
-                        {author && (
-                          <h3 className="mt-3 text-text-muted">
-                            by <span className="font-bold">Rashed</span>
-                          </h3>
-                        )}
+                       
                       </div>
                     </div>
                   )}

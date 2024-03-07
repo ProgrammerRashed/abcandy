@@ -1,108 +1,128 @@
 
 export default  function getJsonData() {
   const data =  [
-        {
-          "imageSrc": "https://images.unsplash.com/photo-1709456136012-59707ec6217d",
-          "category": "DESIGN & CREATIVE",
-          "date": "10 June 2023",
-          "title": "Lorem ipsum dolor sit",
-          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, modi! Fugiat provident deserunt exercitationem magnam suscipit quasi iusto quo aut!",
-          "button": true,
-          "author": false,
-          "authorName": "Rashed"
-        },
-        {
-          "imageSrc": "https://example.com/image2.jpg",
-          "category": "TECHNOLOGY",
-          "date": "15 July 2023",
-          "title": "Nulla facilisi etiam dignissim diam",
-          "content": "Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam.",
-          "button": true,
-          "author": false,
-          "authorName": "John Doe"
-        },
-        {
-          "imageSrc": "https://example.com/image3.jpg",
-          "category": "TRAVEL",
-          "date": "20 August 2023",
-          "title": "Fusce ut placerat orci nulla",
-          "content": "Fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut.",
-          "button": false,
-          "author": true,
-          "authorName": "Jane Smith"
-        },
-        {
-          "imageSrc": "https://example.com/image4.jpg",
-          "category": "FOOD & DRINK",
-          "date": "5 September 2023",
-          "title": "Donec ac odio tempor orci dapibus",
-          "content": "Donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue lacus viverra vitae congue eu consequat ac felis donec et odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.",
-          "button": true,
-          "author": false,
-          "authorName": "Michael Brown"
-        },
-        {
-          "imageSrc": "https://example.com/image5.jpg",
-          "category": "HEALTH & FITNESS",
-          "date": "12 October 2023",
-          "title": "Quisque non tellus orci ac",
-          "content": "Quisque non tellus orci ac auctor augue mauris augue neque gravida in fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis.",
-          "button": true,
-          "author": true,
-          "authorName": "Emily Johnson"
-        },
-        {
-          "imageSrc": "https://example.com/image6.jpg",
-          "category": "FASHION",
-          "date": "8 November 2023",
-          "title": "Vivamus arcu felis bibendum ut tristique",
-          "content": "Vivamus arcu felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus dictum at tempor commodo ullamcorper a lacus vestibulum.",
-          "button": true,
-          "author": false,
-          "authorName": "Sarah Wilson"
-        },
-        {
-          "imageSrc": "https://example.com/image7.jpg",
-          "category": "SPORTS",
-          "date": "3 December 2023",
-          "title": "Praesent tristique magna sit amet purus",
-          "content": "Praesent tristique magna sit amet purus gravida quis blandit turpis cursus in hac habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis.",
-          "button": true,
-          "author": true,
-          "authorName": "David Clark"
-        },
-        {
-          "imageSrc": "https://example.com/image8.jpg",
-          "category": "BUSINESS",
-          "date": "20 January 2024",
-          "title": "Etiam dignissim diam quis enim",
-          "content": "Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa vitae tortor condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue lacus viverra vitae congue eu consequat ac felis donec et odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.",
-          "button": false,
-          "author": false,
-          "authorName": "Jessica Turner"
-        },
-        {
-          "imageSrc": "https://example.com/image9.jpg",
-          "category": "EDUCATION",
-          "date": "14 February 2024",
-          "title": "Mauris a diam maecenas sed",
-          "content": "Mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis.",
-          "button": true,
-          "author": true,
-          "authorName": "Michael Smith"
-        },
-        {
-          "imageSrc": "https://example.com/image10.jpg",
-          "category": "MUSIC",
-          "date": "5 March 2024",
-          "title": "Cras fermentum odio eu feugiat",
-          "content": "Cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis aenean et tortor at risus viverra.",
-          "button": true,
-          "author": false,
-          "authorName": "Sophia Anderson"
-        }
-      ]
+    {
+      "imageSrc": "https://i.ibb.co/R9GMCNL/one.jpg",
+      "category": "DESIGN & CREATIVE",
+      "date": "10 June 2023",
+      "title": "Exploring New Horizons in Graphic Design",
+      "content": "Discover the latest trends and innovations shaping the world of graphic design. Join us as we delve deep into the realm of creativity and imagination.",
+      "button": "Read More",
+      "tags": ["carousel"]
+    },
+    {
+      "imageSrc": "https://i.ibb.co/1R8kLTR/two.jpg",
+      "category": "DESIGN & CREATIVE",
+      "date": "10 June 2023",
+      "title": "Unleashing Creativity: A Guide to Design Freedom",
+      "content": "Unlock the secrets of design freedom and learn how to express your creativity without boundaries. Explore the limitless possibilities of design.",
+      "button": "Read More",
+      "tags": ["carousel"]
+    },
+    {
+      "imageSrc": "https://i.ibb.co/nzJfs5Q/three.jpg",
+      "category": "DESIGN & CREATIVE",
+      "date": "10 June 2023",
+      "title": "The Art of Visual Storytelling",
+      "content": "Master the art of visual storytelling and captivate your audience with compelling narratives. Explore techniques used by top designers worldwide.",
+      "button": "Read More",
+      "tags": ["carousel"]
+    },
+    {
+      "imageSrc": ["https://i.ibb.co/QJHV1ZZ/four.jpg", "https://i.ibb.co/nzJfs5Q/three.jpg", "https://i.ibb.co/1R8kLTR/two.jpg"],
+      "category": "DESIGN & CREATIVE",
+      "date": "10 June 2023",
+      "title": "Innovative Designs Redefining Modern Aesthetics",
+      "content": "Join Emily Johnson as she explores groundbreaking designs that challenge conventions and redefine modern aesthetics. Prepare to be inspired!",
+      "tags": ["spacial"]
+
+    },
+    
+    {
+      "videoSrc": "https://www.youtube.com/embed/DA7gA0oH6Nk?si=DUtXqBdMJT17wqKT",
+      "category": "DESIGN & CREATIVE",
+      "date": "10 June 2023",
+      "title": "Revolutionizing Design: A Visual Journey",
+      "tags": ["spacial", "video"],
+      "button": "Watch Now",
+    },
+    {
+      "imageSrc": "https://example.com/image6.jpg",
+      "category": "Development",
+      "date": "8 November 2023",
+      "title": "Unlocking the Potential of Web Development",
+      "content": "Embark on a journey to unlock the full potential of web development. Explore the latest frameworks, tools, and techniques revolutionizing the industry.",
+      "button": "Read More",
+      "tags": ["spacial"]
+    },
+    {
+      "imageSrc": "https://i.ibb.co/K0f55Zv/seven.jpg",
+      "category": "SPORTS",
+      "date": "3 December 2023",
+      "title": "Pushing Boundaries: The Evolution of Extreme Sports",
+      "content": "Experience the adrenaline rush as we dive into the evolution of extreme sports. From skydiving to mountain biking, discover the thrills that await!",
+      "author": "David Clark",
+      "tags": ["regular"]
+    },
+    {
+      "imageSrc": "https://i.ibb.co/yBH8W4Z/eight.jpg",
+      "category": "SPORTS",
+      "date": "3 December 2023",
+      "title": "The Science of Athletic Performance",
+      "content": "Delve into the science behind athletic performance and discover the strategies elite athletes use to achieve peak physical condition. Uncover the secrets to success!",
+      "author": "David Clark",
+      "tags": ["regular"]
+    },
+    {
+      "imageSrc": "https://i.ibb.co/K0f55Zv/seven.jpg",
+      "category": "SPORTS",
+      "date": "3 December 2023",
+      "title": "Championing Diversity in Sports",
+      "content": "Celebrate diversity in sports and explore the stories of athletes breaking barriers and championing inclusion. Join us in promoting unity and acceptance!",
+      "author": "David Clark",
+      "tags": ["regular"]
+    },
+    {
+      "imageSrc": "https://i.ibb.co/kHKmYbr/six.jpg",
+      "category": "SPORTS",
+      "date": "3 December 2023",
+      "title": "The Psychology of Winning: Mental Toughness in Sports",
+      "content": "Unlock the secrets of mental toughness and explore the psychology behind winning in sports. Discover how elite athletes harness the power of the mind!",
+      "author": "David Clark",
+      "tags": ["regular"]
+    },
+    {
+      "imageSrc": "https://i.ibb.co/QJHV1ZZ/four.jpg",
+      "category": "SPORTS",
+      "date": "3 December 2023",
+      "title": "The Future of Sports Technology",
+      "content": "Experience the future of sports technology and discover how innovation is reshaping the way we play and compete. Explore cutting-edge advancements!",
+      "author": "David Clark",
+      "tags": ["regular"]
+    },
+    {
+      "imageSrc": "https://i.ibb.co/mvmhY2d/five.jpg",
+      "category": "SPORTS",
+      "date": "3 December 2023",
+      "title": "Empowering Women in Sports",
+      "content": "Celebrate the achievements of women in sports and explore the impact of female athletes on the world stage. Join us in promoting equality and empowerment!",
+      "author": "David Clark",
+      "tags": ["regular"]
+    },
+  ];
+
       
 
   return data
 }
+
+
+{/* <a href="https://ibb.co/t8yG8bL"><img src="https://i.ibb.co/2gX9gjZ/nine.jpg" alt="nine" border="0"></a>
+<a href="https://ibb.co/LhVCnNc"><img src="https://i.ibb.co/yBH8W4Z/eight.jpg" alt="eight" border="0"></a>
+<a href="https://ibb.co/3rjTTXZ"><img src="https://i.ibb.co/K0f55Zv/seven.jpg" alt="seven" border="0"></a>
+<a href="https://ibb.co/PmxDBXb"><img src="https://i.ibb.co/kHKmYbr/six.jpg" alt="six" border="0"></a>
+<a href="https://ibb.co/wJTpbP8"><img src="https://i.ibb.co/mvmhY2d/five.jpg" alt="five" border="0"></a>
+<a href="https://ibb.co/3TFbLww"><img src="https://i.ibb.co/QJHV1ZZ/four.jpg" alt="four" border="0"></a>
+<a href="https://ibb.co/72mVJ6r"><img src="https://i.ibb.co/nzJfs5Q/three.jpg" alt="three" border="0"></a>
+<a href="https://ibb.co/XFSqbtF"><img src="https://i.ibb.co/1R8kLTR/two.jpg" alt="two" border="0"></a>
+<a href="https://ibb.co/MsyjRfq"><img src="https://i.ibb.co/R9GMCNL/one.jpg" alt="one" border="0"></a> */}
