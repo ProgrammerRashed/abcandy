@@ -25,7 +25,6 @@ const Modal: React.FC<ModalProps> = ({ isShowModal, onClose, children, modalTitl
   return (
     <div
       className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[#2C2347] backdrop-blur-sm bg-opacity-50 z-50"
-      onClick={onClose}
     >
       <div className="absolute  min-w-96 bg-white shadow-xl z-50 ">
         <div className="bg-[#2C2347] p-3">

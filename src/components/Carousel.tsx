@@ -123,7 +123,7 @@ export const Carousel = () => {
       </div>
 
       {/* INDICATORS */}
-      <div className="absolute z-50 bottom-0 translate-y-16 bg-white px-2 py-1 rounded-full ">
+      <div className="absolute z-40 bottom-0 translate-y-16 bg-white px-2 py-1 rounded-full ">
         <div className="indicators">
           {data.map((_, idx) => {
             return (
