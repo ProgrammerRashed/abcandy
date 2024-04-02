@@ -29,11 +29,11 @@ export default function Home() {
         </div>
 
         {/* BLOGS SECTION */}
-        <section className="container mx-auto mt-24 px-4 md:px-6 lg:px-10">
+        <section className="container mx-auto mt-24">
           {/* BLOG HEADER */}
           <BlogHeader />
 
-          <div className="blogs grid lg:grid-cols-2 gap-10">
+          <div className="blogs grid lg:grid-cols-2 gap-5">
             <SpacialPost />
             <SpacialVideoPost />
           </div>

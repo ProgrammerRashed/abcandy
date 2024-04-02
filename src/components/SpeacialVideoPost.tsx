@@ -16,16 +16,16 @@ const SpacialVideoPost = () => {
 
   if (!data ) {
     return (
-        <div className="w-[580px] h-[300px] bg-gray-200 animate-pulse"></div>
+        <div className="w-[630px] h-[530px] bg-gray-200 animate-pulse"></div>
     );
 }
 
 
 
   return (
-    <div className="w-full text-text-primary h-auto">
+    <div className="w-[630px] h-[530px] text-text-primary overflow-hidden">
       {/* CARD HEAD */}
-      <div className=" image-container relative min-h-[300px] max-h-[350px] w-full overflow-hidden">
+      <div className=" image-container relative w-[630px] h-[300px]">
         <Image
          src={Array.isArray(data.imageSrc) ? data.imageSrc[0] : data.imageSrc || ""}
           alt="blog-thumbnail"
@@ -46,11 +46,9 @@ const SpacialVideoPost = () => {
         {/* CARD CONTENT */}
         <div className="content space-y-5">
           <h1 className="text-2xl ">
-          {data?.title}
+          {data?.title} Lorem ipsum dolor sit amet.
           </h1>
-          <p className="text-text-muted space-y-4">
-            {data?.content}
-            </p>
+       
         </div>
 
         {/* CARD FOOTER */}

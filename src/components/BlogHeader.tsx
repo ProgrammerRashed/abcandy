@@ -5,13 +5,13 @@ const BlogHeader = () => {
       <div className="flex flex-col lg:flex-row gap-10 items-center">
         <h1 className="text-5xl font-bold ">Blog</h1>
         <div className="hidden lg:flex gap-3">
-          <div className="tag bg-[#dee5ed] px-5 py-3 inline-block rounded-full">
+          <div className="tag bg-[#2C23471A] px-5 py-3 inline-block rounded-full">
             Sport
           </div>
-          <div className="tag bg-[#dee5ed] px-5 py-3 inline-block rounded-full">
+          <div className="tag bg-[#2C23471A] px-5 py-3 inline-block rounded-full">
             Sport Car
           </div>
-          <div className="tag bg-[#dee5ed] px-5 py-3 inline-block rounded-full">
+          <div className="tag bg-[#2C23471A] px-5 py-3 inline-block rounded-full">
             Bike
           </div>
         </div>
