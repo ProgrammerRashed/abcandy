@@ -102,16 +102,16 @@ export const Carousel = () => {
       </div>
 
       {/* INDICATORS */}
-      <div className="absolute z-40 bottom-0 translate-y-16 bg-white px-1 py-1 rounded-full ">
-        <div className="indicators">
+      <div className="absolute z-40 -bottom-10 bg-white rounded-full">
+        <div className="indicators flex justify-center items-center gap-2 px-2 h-[18px] ">
           {data.map((_, idx) => {
             return (
               <button
                 key={idx}
                 className={
                   slide === idx
-                    ? "indicator  h-4 w-4 rounded-full mx-2 bg-text-button"
-                    : "indicator indicator-inactive bg-[#cdc6e6] h-4 w-4 rounded-full mx-2"
+                    ? "indicator  h-[10px] w-[10px] rounded-full bg-text-button"
+                    : "indicator indicator-inactive bg-[#cdc6e6] h-[10px] w-[10px] rounded-full"
                 }
                 onClick={() => setSlide(idx)}
               ></button>

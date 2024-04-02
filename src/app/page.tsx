@@ -22,14 +22,14 @@ export default function Home() {
 
       <main>
         <div
-          style={{ borderRadius: "25% 25% 25% 25% / 0% 0% 25% 25%" }}
-          className="bg-gradient-to-br from-slate-100 via-slate-100 to-[#f9daff] h-[160vh] lg:h-[150vh] px-4 md:px-6 lg:px-10"
+        style={{ borderRadius: "0% 0% 48% 43% / 0% 0% 5% 6%", background: "radial-gradient(186.4% 69.29% at 15.9% 30.71%, #D1EFFF 0%, rgb(248,218,255) 100%)"}}
+          className=" W-[1440px] h-[1070px]"
         >
           <Carousel />
         </div>
 
         {/* BLOGS SECTION */}
-        <section className="max-w-[1440px] mx-auto my-20 px-4 md:px-6 lg:px-10">
+        <section className="container mx-auto mt-24 px-4 md:px-6 lg:px-10">
           {/* BLOG HEADER */}
           <BlogHeader />
 

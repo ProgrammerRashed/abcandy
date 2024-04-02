@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 const FooterComp = () => {
   return (
-    <div className="max-w-[1440px] mx-auto mt-20">
+    <div className="container mx-auto mt-20">
 
     {/* FOOTER SOCIAL */}
     <div className="footer-social flex flex-col justify-center items-center lg:block">

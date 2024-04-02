@@ -17,14 +17,14 @@ const SpacialPost = () => {
 
 if (!data[0]) {
     return (
-        <div className="w-[580px] h-[300px] bg-gray-200 animate-pulse"></div>
+        <div className="w-[630px] h-[530px] bg-gray-200 animate-pulse"></div>
     );
 }
 
 
   return (
     <div>
-      <div className="w-full text-text-primary min-h-full">
+      <div className="text-text-primary w-[630px] h-[530px]">
         {/* CARD HEAD */}
         <div className="image-container relative min-h-[300px] max-h-[350px] w-full overflow-hidden">
           {data[0].imageSrc!.map((item, idx) => {

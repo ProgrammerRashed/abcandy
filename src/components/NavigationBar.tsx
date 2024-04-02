@@ -10,7 +10,7 @@ const NavigationBar = () => {
     }
   return (
     <nav className="bg-white py-6 text-text-primary">
-        <div className="container max-w-[1440px] mx-auto flex flex-col lg:flex-row justify-between items-center">
+        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
             <ul className="hidden lg:flex gap-5 items-center">
                 <li>About Us</li>
                 <li>Services</li>
