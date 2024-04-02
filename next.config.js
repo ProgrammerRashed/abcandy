@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
-    basePath: "/abcandy",
-    reactStrictMode: true,
+  images: {
+    remotePatterns: [
+    {
+       protocol: "https",
+       hostname: "**",
+     },
+    ],
+ }
+    // output: "export",
+    // basePath: "/abcandy",
+    // reactStrictMode: true,
 
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,

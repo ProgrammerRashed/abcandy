@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         {/* BLOGS SECTION */}
-        <section className="max-w-[1290px] mx-auto my-20 px-4 md:px-6 lg:px-10">
+        <section className="max-w-[1440px] mx-auto my-20 px-4 md:px-6 lg:px-10">
           {/* BLOG HEADER */}
           <BlogHeader />
 
