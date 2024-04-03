@@ -6,8 +6,6 @@ import { FaArrowLeftLong, FaArrowRight } from "react-icons/fa6";
 
 export const Carousel = () => {
   const [slide, setSlide] = React.useState(0);
-  const button = true;
-  const author = false;
   const rawData = getJsonData();
   const data = rawData.filter((singleData) =>
     singleData.tags.includes("carousel")
@@ -22,7 +20,7 @@ export const Carousel = () => {
   };
 
   return (
-    <div className="carousel relative w-full flex justify-center items-center">
+    <div className="font-dm carousel relative w-full flex justify-center items-center">
       <div className="relative w-full flex justify-center items-center overflow-hidden">
         <div
           className="flex justify-between gap-[30px]  translate-x-[880px] h-[650px]"
@@ -54,22 +52,22 @@ export const Carousel = () => {
                 />
                 <div>
                   {adjustedIdx === slide && (
-                    <div className="card-body bg-white p-5 text-text-primary">
-                      <div className="publish-meta flex gap-3 my-4">
-                        <p className="category font-semibold uppercase">
+                    <div className="card-body bg-white px-5  py-4  text-text-primary">
+                      <div className="publish-meta flex gap-3 text-sm">
+                        <p className="category font-medium uppercase">
                           {item?.category}
                         </p>
                         <p className="Date !text-text-muted">{item?.date}</p>
                       </div>
-                      <div className="content space-y-5">
-                        <h1 className="text-2xl">{item?.title}</h1>
-                        <p className="!text-text-muted space-y-4">
+                      <div className="content pt-4 space-y-2">
+                        <h1 className="text-2xl font-lora font-medium">{item?.title}</h1>
+                        <p className="!text-text-muted font-dm text-base">
                           {item?.content}
                         </p>
                       </div>
                       <div className="mt-5">
-                        {button && (
-                          <button className="text-text-button px-3 py-2 border border-text-button">
+                        {item?.button && (
+                          <button className="text-text-button px-5 font-medium font-dm py-2 border border-text-button">
                             {item?.button}
                           </button>
                         )}

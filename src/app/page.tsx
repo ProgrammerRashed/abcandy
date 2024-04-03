@@ -17,7 +17,7 @@ export default function Home() {
   )[0];
 
   return (
-    <div>
+    <div className="font-dm">
       <div className="px-4 md:px-6 lg:px-10">
         <NavigationBar />
       </div>
