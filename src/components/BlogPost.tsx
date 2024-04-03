@@ -5,7 +5,7 @@ const BlogPost = ({ data, isFeatured }: any) => {
   return (
     <div className="w-full text-text-primary h-full">
       {/* CARD HEAD */}
-      <div className={`"image-container relative ${isFeatured ? "h-[400px]" : "h-[250px]"} w-full overflow-hidden"`}>
+      <div className={`"image-container relative ${isFeatured ? "xl:h-[400px] lg:h-[250px] h-[250px]" : "h-[250px]"} w-full overflow-hidden"`}>
         <Image
           src={data?.imageSrc}
           alt={data?.title}
@@ -14,7 +14,7 @@ const BlogPost = ({ data, isFeatured }: any) => {
         />
       </div>
       {/* CARD BODY */}
-      <div className={`"card-body bg-[#F5F4FB] px-5  py-4  ${isFeatured ? "h-[250px]" : "h-[290px]"} "`}>
+      <div className={`"card-body bg-[#F5F4FB] px-5  py-4  ${isFeatured ? "h-auto lg:h-[250px]" : "h-auto lg:h-[290px]"} "`}>
         <div className="publish-meta flex gap-3 text-sm font-dm">
           <p className="category font-semibold uppercase">{data?.category}</p>
           <p className="Date">{data?.date}</p>

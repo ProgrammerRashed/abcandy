@@ -49,7 +49,7 @@ export default function Home() {
 
           {/* FEATURED BLOG SECTION */}
           <div className="featured-section w-full flex flex-col lg:flex-row justify-between overflow-hidden">
-            <div className="lg:w-[960px] lg:h-[650px] w-full">
+            <div className="xl:w-[960px] lg:w-[650px] xl:h-[650px] lg:h-[500px] w-full">
               <BlogPost data={data} isFeatured={true} />
             </div>
             <div
@@ -59,9 +59,9 @@ export default function Home() {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="w-full lg:w-[300px] lg:h-[650px] lg:mt-0 h-full flex justify-center items-end"
+              className="w-full xl:w-[300px] lg:w-[280px] xl:h-[650px] lg:h-[500px] h-[650px] lg:mt-0 mt-5 flex justify-center items-end"
             >
-              <div className="h-[170px] w-[280px] ">
+              <div className="h-[170px] w-full lg:w-[280px] xl:p-0 lg:px-2 px-4">
                 <FeatureCta />
               </div>
             </div>

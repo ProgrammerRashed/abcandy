@@ -9,7 +9,7 @@ const FooterComp = () => {
 
     {/* FOOTER SOCIAL */}
     <div className="footer-social flex flex-col justify-center items-center lg:block">
-      <h3 className="text-3xl text-white">Connect with us</h3>
+      <h3 className="text-3xl text-white">Connect with Us</h3>
       <div className="icons flex gap-3 mt-3">
         <Link
           href=""
