@@ -27,9 +27,9 @@ export default function Home() {
           style={{
             borderRadius: "0% 0% 48% 43% / 0% 0% 5% 6%",
             background:
-              "radial-gradient(186.4% 69.29% at 15.9% 30.71%, #D1EFFF 0%, rgb(248,218,255) 100%)",
+              "linear-gradient(100deg, rgba(237,237,237,0.1) 15%, rgba(209,239,255,0.45) 30%, rgba(248,218,255,0.7) 98%)",
           }}
-          className=" W-[1440px] h-[1070px]"
+          className=" h-[1070px]"
         >
           <Carousel />
         </div>

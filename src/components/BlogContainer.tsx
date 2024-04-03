@@ -20,33 +20,31 @@ const BlogContainer = () => {
     const allBlogs = rawData.filter((singleData) =>
       singleData.tags.includes("regular")
     );
-    setSelectedBlogs((allBlogs));
+    setSelectedBlogs(allBlogs);
   };
 
   return (
-    <div>
-      <div>
-        <div className="grid lg:grid-cols-3 my-20 gap-10">
-          {selectedBlogs?.map((singleBlog, index) => {
-            return (
-              <div key={index}>
-                <BlogPost data={singleBlog} />
-              </div>
-            );
-          })}
-        </div>
+    <div className="my-20">
+      <div className="grid lg:grid-cols-3  gap-10">
+        {selectedBlogs?.map((singleBlog, index) => {
+          return (
+            <div key={index}>
+              <BlogPost data={singleBlog} />
+            </div>
+          );
+        })}
+      </div>
 
-        {/* ALL BLOGS CTA */}
-        <div className="text-center">
-          <button
-            onClick={() => {
-              handleLoadMore();
-            }}
-            className="border border-text-button text-text-button px-3 py-2"
-          >
-            Load More
-          </button>
-        </div>
+      {/* ALL BLOGS CTA */}
+      <div className="text-center mt-10">
+        <button
+          onClick={() => {
+            handleLoadMore();
+          }}
+          className="border border-text-button font-medium text-text-button px-5 py-2"
+        >
+          Load More
+        </button>
       </div>
     </div>
   );

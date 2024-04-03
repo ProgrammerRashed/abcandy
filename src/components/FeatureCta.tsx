@@ -10,13 +10,13 @@ const FeatureCta = () => {
     setIsShowModal(false);
   };
   return (
-    <div className="h-full w-full">
-      <div className="bg-white p-3 space-y-3 ">
-        <p className="text-lg text-text-primary uppercase">
+    <div className="h-full w-full"> 
+      <div className="bg-white p-3 space-y-4 ">
+        <p className="text-xl font-bold text-text-primary uppercase">
           Do you need any creative service for your business?
         </p>
         <button
-          className="px-3 py-2 bg-color-primary text-white"
+          className="px-5 py-2 font-medium bg-color-primary text-white"
           onClick={() => {
             setIsShowModal(true);
           }}

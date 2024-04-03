@@ -38,14 +38,14 @@ const SpacialVideoPost = () => {
           </div>
       </div>
       {/* CARD BODY */}
-      <div className="card-body bg-[#F5F4FB] p-5 min-h-[310px]">
-        <div className="publish-meta flex gap-3 my-4">
-          <p className="category font-semibold uppercase">{data?.category}</p>
+      <div className="card-body bg-[#F5F4FB] px-5 py-4 min-h-[310px]">
+        <div className="publish-meta flex gap-3 text-sm">
+          <p className="category font-medium uppercase ">{data?.category}</p>
           <p className="Date">{data?.date}</p>
         </div>
         {/* CARD CONTENT */}
-        <div className="content space-y-5">
-          <h1 className="text-2xl ">
+        <div className="content pt-5">
+          <h1 className="text-2xl font-lora font-medium">
           {data?.title} Lorem ipsum dolor sit amet.
           </h1>
        
@@ -60,7 +60,7 @@ const SpacialVideoPost = () => {
             onClick={() => {
               setIsShowModal(!isShowModal);
             }}
-            className="text-text-button px-3 py-2 border border-text-button"
+            className="text-text-button  px-5 font-medium font-dm py-2 border border-text-button"
           >
             Watch Now
           </button>

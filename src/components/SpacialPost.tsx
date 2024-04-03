@@ -58,25 +58,24 @@ const SpacialPost = () => {
         </div>
       </div>
       {/* CARD BODY */}
-      <div className="card-body bg-[#F5F4FB] p-5 min-h-[260px]">
-        <div className="publish-meta flex gap-3 my-4">
-          <p className="category font-semibold uppercase">
-            {" "}
+      <div className="card-body bg-[#F5F4FB] px-5 py-4 min-h-[260px]">
+        <div className="publish-meta flex gap-3 text-sm">
+          <p className="category font-medium  uppercase">
             {data[0]?.category}
           </p>
           <p className="Date">{data[0]?.date}</p>
         </div>
         {/* CARD CONTENT */}
-        <div className="content space-y-5">
-          <h1 className="text-2xl ">{data[0]?.title}</h1>
-          <p className="text-text-muted space-y-4">{data[0]?.content}</p>
+        <div className="content pt-4 space-y-2">
+          <h1 className="text-2xl font-lora font-medium">{data[0]?.title}</h1>
+          <p className="text-text-muted text-base">{data[0]?.content}</p>
         </div>
 
         {/* CARD FOOTER */}
         <div className="mt-5">
           {/* AUTHOR DETAILS */}
-          <h3 className="my-4 text-text-muted">
-            by <span className="font-bold"> {data[0]?.author}</span>
+          <h3 className="my-4 text-text-muted text-base">
+            by <span className="font-medium"> {data[0]?.author}</span>
           </h3>
         </div>
       </div>
