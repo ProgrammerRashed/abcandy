@@ -11,8 +11,10 @@ import getJsonData from "@/utils/getJsonData";
 import BlogContainer from "@/components/BlogContainer";
 
 export default function Home() {
-  const rawData = getJsonData()
-  const data = rawData.filter(singleData => singleData.tags.includes("feature"))[0]
+  const rawData = getJsonData();
+  const data = rawData.filter((singleData) =>
+    singleData.tags.includes("feature")
+  )[0];
 
   return (
     <div>
@@ -22,7 +24,11 @@ export default function Home() {
 
       <main>
         <div
-        style={{ borderRadius: "0% 0% 48% 43% / 0% 0% 5% 6%", background: "radial-gradient(186.4% 69.29% at 15.9% 30.71%, #D1EFFF 0%, rgb(248,218,255) 100%)"}}
+          style={{
+            borderRadius: "0% 0% 48% 43% / 0% 0% 5% 6%",
+            background:
+              "radial-gradient(186.4% 69.29% at 15.9% 30.71%, #D1EFFF 0%, rgb(248,218,255) 100%)",
+          }}
           className=" W-[1440px] h-[1070px]"
         >
           <Carousel />
@@ -42,17 +48,27 @@ export default function Home() {
           <BlogBanner />
 
           {/* FEATURED BLOG SECTION */}
-          <div className="featured-section w-full flex flex-col lg:flex-row justify-between">
-            <div className="lg:w-[70%] w-full">
-              <BlogPost data={data}/>
+          <div className="featured-section w-full flex flex-col lg:flex-row justify-between overflow-hidden">
+            <div className="lg:w-[960px] lg:h-[650px] w-full">
+              <BlogPost data={data} isFeatured={true} />
             </div>
-            <div className="w-full mt-5 lg:mt-0 lg:w-[25%] h-full">
-              <FeatureCta />
+            <div
+              style={{
+                background: `linear-gradient(rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%), url('https://i.ibb.co/kHTR1HM/feature-bg.jpg')`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+              className="w-full lg:w-[300px] lg:h-[650px] lg:mt-0 h-full flex justify-center items-end"
+            >
+              <div className="h-[170px] w-[280px] ">
+                <FeatureCta />
+              </div>
             </div>
           </div>
 
           {/* ALL BLOGS */}
-         <BlogContainer/>
+          <BlogContainer />
         </section>
 
         {/* FOOTER SECTION */}
