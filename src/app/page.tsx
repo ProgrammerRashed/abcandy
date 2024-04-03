@@ -29,13 +29,13 @@ export default function Home() {
             background:
               "linear-gradient(100deg, rgba(237,237,237,0.1) 15%, rgba(209,239,255,0.45) 30%, rgba(248,218,255,0.7) 98%)",
           }}
-          className=" h-[1070px]"
+          className="h-[1070px]"
         >
           <Carousel />
         </div>
 
         {/* BLOGS SECTION */}
-        <section className="container mx-auto mt-24">
+        <section className="container mx-auto mt-24 xl:p-0 px-3 md:px-5 lg:px-8">
           {/* BLOG HEADER */}
           <BlogHeader />
 

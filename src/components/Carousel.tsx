@@ -23,7 +23,7 @@ export const Carousel = () => {
     <div className="font-dm carousel relative w-full flex justify-center items-center">
       <div className="relative w-full flex justify-center items-center overflow-hidden">
         <div
-          className="flex justify-between gap-[30px]  translate-x-[880px] h-[650px]"
+          className="flex justify-center  gap-[30px] translate-x-[370px] md:translate-x-[530px] lg:translate-x-[830px] h-[650px] "
           style={{ transition: "transform 0.5s ease"}}
         >
           {[...data, ...data, ...data].map((item, idx) => {
@@ -32,13 +32,14 @@ export const Carousel = () => {
               <div
                 key={idx}
                 style={{
-                  transform: `translateX(-${slide * 850}px)`,
+                  transform: `translateX(-${slide * 105}%)`,
                   transition: "transform 0.5s ease",
                 }}
-                className={`slide w-[850px] relative ${
-                  adjustedIdx === slide ? "z-0" : "opacity-50 -z-50"
+                className={`slide w-[350px] md:w-[500px] lg:w-[800px] relative ${
+                  adjustedIdx === slide ? "z-0" : "opacity-0 md:opacity-50 -z-50"
                 }`}
               >
+                <div className="w-[350px] md:w-[500px] lg:w-[800px] h-[400px]">
                 <Image
                   src={
                     Array.isArray(item.imageSrc)
@@ -46,10 +47,12 @@ export const Carousel = () => {
                       : item.imageSrc || ""
                   }
                   alt={item.title}
-                  width={850}
+                  width={350}
                   height={400}
-                  style={{ height: "400px", objectFit: "cover" }}
+                  className="object-cover w-full h-full"
                 />
+                </div>
+                
                 <div>
                   {adjustedIdx === slide && (
                     <div className="card-body bg-white px-5  py-4  text-text-primary">
@@ -59,9 +62,9 @@ export const Carousel = () => {
                         </p>
                         <p className="Date !text-text-muted">{item?.date}</p>
                       </div>
-                      <div className="content pt-4 space-y-2">
+                      <div className="content  pt-4 space-y-2">
                         <h1 className="text-2xl font-lora font-medium">{item?.title}</h1>
-                        <p className="!text-text-muted font-dm text-base">
+                        <p className="!text-text-muted font-dm text-base hidden lg:block">
                           {item?.content}
                         </p>
                       </div>
@@ -77,7 +80,7 @@ export const Carousel = () => {
                 </div>
                 {/* PREV AND NEXT BUTTONS */}
                 {
-                  adjustedIdx === slide &&  <div className="absolute z-50 top-0 flex justify-between w-[990px] -translate-x-[70px] translate-y-36">
+                  adjustedIdx === slide &&  <div className="hidden lg:flex absolute z-50 top-0 justify-between w-[490px] md:w-[640px] lg:w-[940px] -translate-x-[70px] translate-y-36">
                   <button
                     onClick={prevSlide}
                     className="bg-text-primary p-3 text-white"
