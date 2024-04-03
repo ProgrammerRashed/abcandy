@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import ContactUs from "./ContactUs";
+import NavDrawer from "./NavDrawer";
 const NavigationBar = () => {
   const [isShowModal, setIsShowModal] = React.useState(false);
 
@@ -56,14 +57,12 @@ const NavigationBar = () => {
               />
             </svg>
           </div>
-          <button
+          <div
             className="lg:hidden bg-color-primary px-3 py-3 text-white"
-            onClick={() => {
-              setIsShowModal(true);
-            }}
+            
           >
-            Contact Us
-          </button>
+            <NavDrawer/>
+          </div>
         </div>
         <ul className="hidden lg:flex flex-col lg:flex-row gap-5 items-center">
           <li>Community</li>

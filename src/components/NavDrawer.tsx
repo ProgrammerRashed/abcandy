@@ -1,6 +1,5 @@
-// Drawer.js
-
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 
 const NavDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,14 +10,15 @@ const NavDrawer = () => {
 
   return (
     <div className="relative">
+      <button onClick={toggleDrawer}>Open</button>
       <button
         onClick={toggleDrawer}
         className="fixed z-10 inset-0 bg-black opacity-50 w-full h-full cursor-pointer"
-        style={{ display: isOpen ? 'block' : 'none' }}
+        style={{ display: isOpen ? "block" : "none" }}
       ></button>
       <div
-        className={`fixed z-20 bg-white top-0 right-0 w-64 h-full shadow-lg transform transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed z-20 bg-white text-black top-0 right-0 w-64 h-full shadow-lg transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b">
