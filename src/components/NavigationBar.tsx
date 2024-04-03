@@ -9,7 +9,7 @@ const NavigationBar = () => {
     setIsShowModal(false);
   };
   return (
-    <nav className="bg-white py-6 text-text-primary">
+    <nav className="bg-white py-4 text-text-primary font-dm text-lg">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
         <ul className="hidden lg:flex gap-5 items-center">
           <li>About Us</li>
@@ -69,7 +69,7 @@ const NavigationBar = () => {
           <li>Community</li>
           <li>Blog</li>
           <button
-            className="bg-color-primary px-3 py-3 text-white"
+            className="bg-color-primary px-5 py-2 text-white  font-semibold"
             onClick={() => {
               setIsShowModal(true);
             }}
