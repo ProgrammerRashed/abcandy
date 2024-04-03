@@ -39,7 +39,7 @@ export default function Home() {
           {/* BLOG HEADER */}
           <BlogHeader />
 
-          <div className="blogs grid lg:grid-cols-2 gap-5">
+          <div className="blogs grid grid-cols-1 lg:grid-cols-2 gap-5">
             <SpacialPost />
             <SpacialVideoPost />
           </div>
