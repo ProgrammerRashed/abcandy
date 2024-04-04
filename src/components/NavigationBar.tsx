@@ -58,7 +58,7 @@ const NavigationBar = () => {
             </svg>
           </div>
           <div
-            className="lg:hidden bg-color-primary px-3 py-3 text-white"
+            className="lg:hidden bg-color-primary px-3 py-2 text-white flex justify-center items-center"
             
           >
             <NavDrawer/>
