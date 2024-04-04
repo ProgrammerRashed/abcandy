@@ -61,7 +61,7 @@ export default function Home() {
               }}
               className="w-full xl:w-[300px] lg:w-[280px] xl:h-[650px] lg:h-[500px] h-[650px] lg:mt-0 mt-5 flex justify-center items-end"
             >
-              <div className="h-[170px] w-full lg:w-[280px] xl:p-0 lg:px-2 px-4">
+              <div className="h-[150px] md:h-[120px] lg:h-[170px] w-full lg:w-[280px] xl:p-0 lg:px-2 px-4">
                 <FeatureCta />
               </div>
             </div>
