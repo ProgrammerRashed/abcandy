@@ -7,8 +7,6 @@ import { FaArrowLeftLong, FaArrowRight } from "react-icons/fa6";
 export const Carousel = () => {
   const [slide, setSlide] = React.useState(2);
   const rawData = getJsonData();
-  const [dragStartX, setDragStartX] = useState(null);
-  const containerRef = useRef(null);
   const data = rawData.filter((singleData) =>
     singleData.tags.includes("carousel")
   );
@@ -21,46 +19,37 @@ export const Carousel = () => {
     setSlide(slide === 0 ? data.length - 1 : slide - 1);
   };
 
-  
-  const handleDragStart = (e:any) => {
-    setDragStartX(e.clientX);
-  };
 
-  const handleDragMove = (e:any) => {
-    if (dragStartX === null) return;
-    const deltaX = e.clientX - dragStartX;
-    // Adjust the threshold as needed
-    const threshold = 300;
-    if (deltaX > threshold) {
-      // Move to the previous slide
-      prevSlide();
-    } else if (deltaX < -threshold) {
-      // Move to the next slide
-      nextSlide();
+
+  const handleDrag = (event:any) => {
+console.log(event.clientX)
+    if(event.clientX > 600){
+      nextSlide()
+      return
     }
-  };
 
-  const handleDragEnd = () => {
-    setDragStartX(null);
-  };
 
+    if(event.clientX < 100){
+      prevSlide()
+      return
+    }
+   
+  }
   return (
     <div className="font-dm carousel relative w-full flex justify-center items-center">
       <div className="relative w-full flex justify-center items-center overflow-hidden">
         <div
         
           className="flex justify-center  gap-[30px] translate-x-[345px] md:translate-x-[530px] lg:translate-x-[830px] lg:h-[650px] "
-          style={{ transition: "transform 0.5s ease"}}
+          style={{ transition: "opacity 0.8s ease"}}
         >
           {[...data, ...data, ...data].map((item, idx) => {
             const adjustedIdx = idx % data.length;
             return (
               <div
-              ref={containerRef}
-              onMouseDown={handleDragStart}
-              onMouseMove={handleDragMove}
-              onMouseUp={handleDragEnd}
-              onMouseLeave={handleDragEnd}
+             
+              onDrag={handleDrag}
+            
                 key={idx}
                 style={{
                   transform:
@@ -71,7 +60,7 @@ export const Carousel = () => {
                   : slide === 2
                   ? "translateX(-207%)"
                   : "",
-                  transition: "opacity 0.5s ease",
+                  transition: "opacity 0.8s ease",
 
                 }}
                 className={`slide cursor-move w-[350px] md:w-[500px] lg:w-[800px] relative ${

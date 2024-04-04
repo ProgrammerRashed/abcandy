@@ -15,11 +15,11 @@ const NavDrawer = () => {
       </button>
       <button
         onClick={toggleDrawer}
-        className="fixed z-10 inset-0 bg-black opacity-50 w-full h-full cursor-pointer"
+        className="fixed z-50 inset-0 bg-black opacity-50 w-full h-full cursor-pointer"
         style={{ display: isOpen ? "block" : "none" }}
       ></button>
       <div
-        className={`fixed z-20 bg-white text-black top-0 right-0 w-64 h-full shadow-lg transform transition-transform duration-300 ease-in-out ${
+        className={`fixed z-50 bg-white text-black top-0 right-0 w-64 h-full shadow-lg transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

@@ -62,7 +62,7 @@ const SpacialPost = () => {
             />
           );
         })}
-        <div className="absolute z-50 bottom-3  w-full flex justify-center items-center">
+        <div className="absolute z-40 bottom-3  w-full flex justify-center items-center">
           <div className="indicators flex justify-center items-center gap-2 px-2 h-[18px]  bg-[#616870] rounded-full">
             {[0, 1, 2].map((_, idx) => {
               return (
