@@ -17,6 +17,7 @@ export const Carousel = () => {
 
   const prevSlide = () => {
     setSlide(slide === 0 ? data.length - 1 : slide - 1);
+
   };
 
 
@@ -41,7 +42,7 @@ console.log(event.clientX)
         <div
         
           className="flex justify-center  gap-[30px] translate-x-[345px] md:translate-x-[530px] lg:translate-x-[830px] lg:h-[650px] "
-          style={{ transition: "opacity 0.8s ease"}}
+          style={{ transition: "opacity 0.0s"}}
         >
           {[...data, ...data, ...data].map((item, idx) => {
             const adjustedIdx = idx % data.length;
@@ -60,7 +61,7 @@ console.log(event.clientX)
                   : slide === 2
                   ? "translateX(-207%)"
                   : "",
-                  transition: "opacity 0.8s ease",
+                  transition: `opacity 0.8s ${slide === adjustedIdx ? "ease" : "none"}`,
 
                 }}
                 className={`slide cursor-move w-[350px] md:w-[500px] lg:w-[800px] relative ${
@@ -152,121 +153,3 @@ console.log(event.clientX)
   );
 };
 
-
-// "use client";
-// import getJsonData from "@/utils/getJsonData";
-// import Image from "next/image";
-// import React, { useState, useRef } from 'react';
-// import { FaArrowLeftLong, FaArrowRight } from "react-icons/fa6";
-
-// export const Carousel = () => {
-//   const [slide, setSlide] = useState(2);
-//   const [dragStartX, setDragStartX] = useState(null);
-//   const containerRef = useRef(null);
-//   const rawData = getJsonData();
-//   const data = rawData.filter((singleData) =>
-//     singleData.tags.includes("carousel")
-//   );
-
-//   const nextSlide = () => {
-//     setSlide(slide === data.length - 1 ? 0 : slide + 1);
-//   };
-
-//   const prevSlide = () => {
-//     setSlide(slide === 0 ? data.length - 1 : slide - 1);
-//   };
-
-//   const handleDragStart = (e:any) => {
-//     setDragStartX(e.clientX);
-//   };
-
-//   const handleDragMove = (e:any) => {
-//     if (dragStartX === null) return;
-//     const deltaX = e.clientX - dragStartX;
-//     // Adjust the threshold as needed
-//     const threshold = 50;
-//     if (deltaX > threshold) {
-//       // Move to the previous slide
-//       prevSlide();
-//     } else if (deltaX < -threshold) {
-//       // Move to the next slide
-//       nextSlide();
-//     }
-//   };
-
-//   const handleDragEnd = () => {
-//     setDragStartX(null);
-//   };
-
-//   return (
-//     <div
-//       className="font-dm carousel relative w-full flex justify-center items-center"
-//       ref={containerRef}
-//       onMouseDown={handleDragStart}
-//       onMouseMove={handleDragMove}
-//       onMouseUp={handleDragEnd}
-//       onMouseLeave={handleDragEnd}
-//     >
-//       <div className="relative w-full flex justify-center items-center overflow-hidden">
-//         <div
-//           className="flex justify-center gap-[30px] translate-x-[345px] md:translate-x-[530px] lg:translate-x-[830px] lg:h-[650px] "
-//           style={{ transition: "transform 0.5s ease"}}
-//         >
-//           {[...data, ...data, ...data].map((item, idx) => {
-//             const adjustedIdx = idx % data.length;
-//             return (
-//               <div
-//                 key={idx}
-//                 style={{
-//                   transform:
-//                     slide === 0
-//                       ? "translateX(0.5%)"
-//                       : slide === 1
-//                       ? "translateX(-103.3%)"
-//                       : slide === 2
-//                       ? "translateX(-207%)"
-//                       : "",
-//                   transition: "opacity 0.5s ease",
-//                 }}
-//                 className={`slide w-[350px] md:w-[500px] lg:w-[800px] relative ${
-//                   adjustedIdx === slide ? "z-0" : "opacity-0 md:opacity-40 -z-50"
-//                 }`}
-//               >
-//                 {/* Your slide content */}
-//               </div>
-//             );
-//           })}
-//         </div>
-//       </div>
-
-//       {/* Previous and Next Buttons */}
-//       <div className="hidden lg:flex absolute z-50 top-0 justify-between w-[490px] md:w-[640px] lg:w-[940px] -translate-x-[70px] translate-y-36">
-//         <button onClick={prevSlide} className="bg-text-primary p-3 text-white">
-//           <FaArrowLeftLong className="arrow arrow-left" />
-//         </button>
-//         <button onClick={nextSlide} className="bg-text-primary p-3 text-white">
-//           <FaArrowRight className="arrow arrow-right" />
-//         </button>
-//       </div>
-
-//       {/* Indicators */}
-//       <div className="absolute z-40 -bottom-10 bg-white rounded-full">
-//         <div className="indicators flex justify-center items-center gap-2 px-2 h-[18px] ">
-//           {data.map((_, idx) => {
-//             return (
-//               <button
-//                 key={idx}
-//                 className={
-//                   slide === idx
-//                     ? "indicator  h-[10px] w-[10px] rounded-full bg-text-button"
-//                     : "indicator indicator-inactive bg-[#cdc6e6] h-[10px] w-[10px] rounded-full"
-//                 }
-//                 onClick={() => setSlide(idx)}
-//               ></button>
-//             );
-//           })}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
