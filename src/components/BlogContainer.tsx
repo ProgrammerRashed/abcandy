@@ -24,7 +24,7 @@ const BlogContainer = () => {
   };
 
   return (
-    <div className="my-20">
+    <div className="my-8 lg:my-20">
       <div className="grid lg:grid-cols-2 xl:grid-cols-3  gap-10">
         {selectedBlogs?.map((singleBlog, index) => {
           return (
@@ -36,7 +36,7 @@ const BlogContainer = () => {
       </div>
 
       {/* ALL BLOGS CTA */}
-      <div className="text-center mt-10">
+      <div className="text-center mt-5 lg:mt-10">
         <button
           onClick={() => {
             handleLoadMore();

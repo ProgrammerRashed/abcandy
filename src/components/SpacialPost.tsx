@@ -11,6 +11,29 @@ const SpacialPost = () => {
     singleData.tags.includes("spacial")
   );
 
+  const nextSlide = () => {
+    setSlide(slide === data[0].imageSrc.length - 1 ? 0 : slide + 1);
+  };
+
+  const prevSlide = () => {
+    setSlide(slide === 0 ? data[0].imageSrc.length - 1 : slide - 1);
+  };
+
+
+  const handleDrag = (event) => {
+
+    if(event.clientX > 600){
+      nextSlide()
+      return
+    }
+
+
+    if(event.clientX < 100){
+      prevSlide()
+      return
+    }
+   
+  }
   if (!data || data.length === 0) {
     return (
       <div className="w-full sm:w-[20rem] md:w-[25rem] lg:w-[30rem] xl:w-[39.375rem] h-full sm:h-[15rem] md:h-[20rem] lg:h-[25rem] xl:h-[33.125rem] bg-gray-200 animate-pulse"></div>
@@ -25,7 +48,9 @@ const SpacialPost = () => {
 
   return (
     <div className="text-text-primary w-full h-full lg:h-[35rem]  xl:w-[39.375rem] xl:h-[33.125rem] overflow-hidden">
-      <div className="image-container relative min-h-[300px] w-full">
+      <div 
+      onDrag={handleDrag}
+      className="image-container relative min-h-[300px] w-full">
         {data[0].imageSrc!.map((item, idx) => {
           return (
             <Image

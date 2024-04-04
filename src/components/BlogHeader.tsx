@@ -1,7 +1,7 @@
 import { CiSearch } from "react-icons/ci";
 const BlogHeader = () => {
   return (
-    <div className="text-text-primary my-8 flex flex-col lg:flex-row justify-between items-center -mt-96">
+    <div className="text-text-primary my-8 flex flex-col lg:flex-row justify-between items-center">
       <div className="flex flex-col lg:flex-row gap-10 items-center">
         <h1 className="text-4xl font-bold ">Blog</h1>
         <div className="hidden lg:flex gap-3">

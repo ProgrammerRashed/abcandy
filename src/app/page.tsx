@@ -35,7 +35,7 @@ export default function Home() {
         </div>
 
         {/* BLOGS SECTION */}
-        <section className="container mx-auto mt-24 xl:p-0 px-3 md:px-5 lg:px-8">
+        <section className="container mx-auto -mt-[550px] lg:-mt-96 xl:p-0 px-3 md:px-5 lg:px-8">
           {/* BLOG HEADER */}
           <BlogHeader />
 
