@@ -52,7 +52,6 @@ export const Carousel = () => {
             const adjustedIdx = idx % data.length;
             return (
               <div
-                className="slide-container"
                 ref={containerRef}
                 onMouseDown={handleDragStart}
                 onMouseMove={handleDragMove}
@@ -69,7 +68,7 @@ export const Carousel = () => {
                       ? "translateX(-207%)"
                       : "",
                   transition: ` ${
-                    slide === adjustedIdx ? "opacity 0.8s ease" : "none"
+                    slide === adjustedIdx ? "opacity 1s ease" : "none"
                   }`,
                 }}
                 className={`slide cursor-move w-[350px] md:w-[500px] lg:w-[800px] relative ${
